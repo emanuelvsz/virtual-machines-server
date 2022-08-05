@@ -1,9 +1,9 @@
 # Roteiro para realização do projeto do 2º bimestre das disciplinas de Infraestrutura e Serviços de Redes e Projetos de Redes
 
-Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre quatro computadores com duas VMs cada cada computador.
+Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre quatro computadores com duas VMs cada.
 
 >**_NOTA:_**
-Inicialmente, será criada as duas máquinas virtuais em cada PC do grupo
+Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
 >**_**
 
 
