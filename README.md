@@ -27,11 +27,14 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
 
   Após a criação das duas VMs, é obrigatório os seguintes passos em <b>CADA</b> Máquina Virtual
   
+  para instalar o pacote de rede
   ```
-  sudo apt install net-tools -y # para instalar o pacote de rede
+  sudo apt install net-tools -y
 
   ```
+  
+  para visualizar as interfaces de rede
   ```
-  ifconfig -a # visualizar as interfaces de rede
+  ifconfig -a
 
   ```
