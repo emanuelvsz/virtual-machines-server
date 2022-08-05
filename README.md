@@ -25,7 +25,7 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
   ![criandoVM2](https://user-images.githubusercontent.com/84058517/183087854-27897109-880d-49dd-a3de-c2efda3be598.png)
 
 
-  Após a criação das duas VMs...
+  Após a criação das duas VMs, é obrigatório os seguintes passos em <b>CADA</b> Máquina Virtual
 
 ```
 micaele 
