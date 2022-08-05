@@ -32,11 +32,9 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
   2.1. Para instalar o pacote de rede
   ```
   sudo apt install net-tools -y
-
   ```
   
   2.2 Para visualizar as interfaces de rede
   ```
   ifconfig -a
-
   ```
