@@ -13,8 +13,7 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
 
 1. Criando uma VM utilizando um arquivo .OVA 
 
-  1.1.
-  
+  Figura 01: Importando o arquivo .OVA
   <img width="482" alt="import-ova1" src="https://user-images.githubusercontent.com/84058517/183082785-16a33090-0acb-49f7-966b-da90f937ab38.png">
 
 
