@@ -6,6 +6,9 @@ Roteiro de aula para a criação de máquinas virtuais e criação de uma conex�
 Inicialmente, será criada as duas máquinas virtuais em cada PC
 >**_**
 
+
+
+
 <h2> Criando uma Máquina Virtual </h2>
 
 
