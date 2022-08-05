@@ -11,6 +11,12 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
 
 <h2> Criando uma Máquina Virtual </h2>
 
+1. Criando uma VM utilizando um arquivo .OVA 
+
+  1.1.
+  
+  <img width="482" alt="import-ova1" src="https://user-images.githubusercontent.com/84058517/183082785-16a33090-0acb-49f7-966b-da90f937ab38.png">
+
 
 ```
 micaele 
