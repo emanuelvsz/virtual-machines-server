@@ -11,7 +11,7 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
 
 <h2> Criando uma Máquina Virtual </h2>
 
-1. Criando uma VM utilizando um arquivo .OVA 
+  1. Criando uma VM utilizando um arquivo .OVA 
 
   Figura 01: Importando o arquivo .OVA
   
@@ -27,13 +27,15 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
 
   Após a criação das duas VMs, é obrigatório os seguintes passos em <b>CADA</b> Máquina Virtual
   
-  para instalar o pacote de rede
+  2. Configurando VM
+  
+  2.1. Para instalar o pacote de rede
   ```
   sudo apt install net-tools -y
 
   ```
   
-  para visualizar as interfaces de rede
+  2.2 Para visualizar as interfaces de rede
   ```
   ifconfig -a
 
