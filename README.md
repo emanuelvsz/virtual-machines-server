@@ -19,6 +19,9 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
   
   <br>
   
+  Figura 02: Especificações da Maquina Virtual .OVA
+
+  
   ![criandoVM2](https://user-images.githubusercontent.com/84058517/183087854-27897109-880d-49dd-a3de-c2efda3be598.png)
 
 
