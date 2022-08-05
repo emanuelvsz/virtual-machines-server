@@ -16,6 +16,8 @@ Inicialmente, será criada as duas máquinas virtuais em cada PC
   Figura 01: Importando o arquivo .OVA
   
   <img width="482" alt="import-ova1" src="https://user-images.githubusercontent.com/84058517/183082785-16a33090-0acb-49f7-966b-da90f937ab38.png">
+  
+  ![criandoVM2](https://user-images.githubusercontent.com/84058517/183087854-27897109-880d-49dd-a3de-c2efda3be598.png)
 
 
 ```
