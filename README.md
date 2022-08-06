@@ -44,7 +44,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   * Para fazer com que as maquinas virtuais do PC se comuniquem entre sí, é necessário coloca-las no modo de <b>Rede Interna</b>
     ~adicionar imagem~
 
-  3. Logando nas VMs
+ 3. Logando nas VMs
 
   após tudo ter sido realizado, é necessário logar como administrador para prosseguir
   
@@ -57,6 +57,19 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   ~adicionar imagem~
   
   <h2>Configuração estática de endereço IP na interface de rede</h2>
-    * Primeiramente é necessário modificar o arquivo que configura as interfaces de rede
-    * Esse arquivo é do tipo .YAML e fica no diretório ``/etc/netplan``
   
+  * Primeiramente é necessário modificar o arquivo que configura as interfaces de rede
+  * Esse arquivo é do tipo .YAML e fica no diretório ``/etc/netplan``
+  * Inicialmente, verifique o nome do arquivo em seu computador da seguinte forma:
+
+  ```
+  ls -la /etc/netplan
+  ```
+  
+  ## Editando o .YAML
+  
+  ```
+  sudo nano /etc/netplan/01-netcfg.yaml 
+  ```
+  
+  adicione as seguintes linhas...
