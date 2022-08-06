@@ -38,3 +38,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   ```
   ifconfig -a
   ```
+  
+  2.3 Definindo tipo de rede(no Virtual Box)
+  
+  * Para fazer com que as maquinas virtuais do PC se comuniquem entre sí, é necessário coloca-las no modo de <b>Rede Interna</b>
