@@ -43,3 +43,20 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   
   * Para fazer com que as maquinas virtuais do PC se comuniquem entre sí, é necessário coloca-las no modo de <b>Rede Interna</b>
     ~adicionar imagem~
+
+  3. Logando nas VMs
+
+  após tudo ter sido realizado, é necessário logar como administrador para prosseguir
+  
+  ### Para logar 
+  
+  ```
+  ubunto login: administrador
+  senha: adminifal
+  ```
+  ~adicionar imagem~
+  
+  <h2>Configuração estática de endereço IP na interface de rede</h2>
+    * Primeiramente é necessário modificar o arquivo que configura as interfaces de rede
+    * Esse arquivo é do tipo .YAML e fica no diretório ``/etc/netplan``
+  
