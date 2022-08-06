@@ -58,5 +58,5 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   
   <h2>Configuração estática de endereço IP na interface de rede</h2>
     * Primeiramente é necessário modificar o arquivo que configura as interfaces de rede
-    * Esse arquivo é do tipo .YAML e fica no diretório ``administrador``
+    * Esse arquivo é do tipo .YAML e fica no diretório ``/etc/netplan``
   
