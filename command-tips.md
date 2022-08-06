@@ -1,1 +1,1 @@
-<h1> Comando essenciais em *linux* para a criação do projeto </h1>
+<h1> Comando essenciais em <br>linux</b> para a criação do projeto </h1>
