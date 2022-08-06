@@ -1,6 +1,7 @@
 <h1>Senhas e outros</h1>
 
-senha para usuário <b>redes</b>: admin@Lab92
+Senha para usuário <b>redes</b>: admin@Lab92
+Senha para administrador <b>redes</b>: adminifal
 
 <h1> Comando essenciais em <b>linux</b> para a criação do projeto </h1>
 
