@@ -46,15 +46,15 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
 
  3. Logando nas VMs
 
-  após tudo ter sido realizado, é necessário logar como administrador para prosseguir
+  Após tudo ter sido realizado, é necessário logar como administrador para prosseguir
   
-  ### Para logar 
+   ### Para logar 
   
-  ```
-  ubunto login: administrador
-  senha: adminifal
-  ```
-  ~adicionar imagem~
+   ```
+   ubunto login: administrador
+   senha: adminifal
+   ```
+   ![login](https://user-images.githubusercontent.com/84058517/183930844-c1398edd-1382-4534-8c84-9edab5cd98be.png)
   
   <h1>Definições</h1>
   Após ter concluído os passos anteriores, é necessário declarar um IP único na rede para todas as VMs de cada computador.
@@ -175,6 +175,12 @@ Todos os quatro PCs terão um IP estático identico
     </tr>
   </table>
   
+  ## Inserindo um nome para a rede ``hostname``
+
+  ```
+  sudo hostnamectl set-hostname nome-do-hostname
+  ```
+  
   <h2>Configuração estática de endereço IP na interface de rede</h2>
   
   * Primeiramente é necessário modificar o arquivo que configura as interfaces de rede
@@ -183,12 +189,6 @@ Todos os quatro PCs terão um IP estático identico
 
   ```
   ls -la /etc/netplan
-  ```
-  
-  ## Inserindo um nome para a rede ``hostname``
-
-  ```
-  sudo hostnamectl set-hostname nome-do-hostname
   ```
   
   ## Editando o .YAML
@@ -239,7 +239,43 @@ sudo netplan apply
        sudo apt upgrade -y
        ```
    * ### Instalando o SSH <br>
-       * Para instalar: 
-           ```
-           sudo apt-get install openssh-server
-           ```
+      ```
+      sudo apt-get install openssh-server
+      ```
+    
+       #### Após ter feito o processo inteiro, sem nenhum empecilho, prossiga:
+       
+       * Verifique se o ssh foi instalado corretamente: 
+
+         ```
+         systemctl status ssh
+         ```
+
+       * Verifique o status das portas do sistema:
+
+         ```
+         netstat -an | grep LISTEN. # verifique se a porta 22 está LISTENING
+         ```
+         
+       * Para garantir o funcionamento do SSH Server, é necessário habilita-lo no firewall. Faça-o: 
+         ```
+         sudo ufw allow ssh
+         ```
+       * Ative o firewall: 
+         ```
+         sudo ufw enable
+         ```
+       #### Após ter concluído o processo, volte para as configurações anteriores:
+       * Coloque a configuração de rede da VM como ``Modo Bridge``
+       
+       ![pipipopo](https://user-images.githubusercontent.com/84058517/183930270-52ff96ea-7539-4d49-aa3d-fd17cc12e59b.png)
+       
+       # Servidor concluído! Ultimos passos: 
+       * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
+       ```
+       ssh usuario@ipderedeunico
+       ```
+       Exemplo: 
+       ```
+       ssh administrador@192.168.14.53
+       ```
