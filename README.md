@@ -185,6 +185,12 @@ Todos os quatro PCs terão um IP estático identico
   ls -la /etc/netplan
   ```
   
+  ## Inserindo um nome para a rede ``hostname``
+
+  ```
+  sudo hostnamectl set-hostname nome-do-hostname
+  ```
+  
   ## Editando o .YAML
   
   ```
@@ -213,11 +219,6 @@ Todos os quatro PCs terão um IP estático identico
 sudo netplan apply
 ```
 
-## Inserindo um nome para a rede ``hostname``
-
-  ```
-  sudo hostnamectl set-hostname nome-do-hostname
-  ```
   ## Começando a instalar o ``SSH Server``
   
    1. Pré-requisitos: <br>
