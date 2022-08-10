@@ -134,42 +134,42 @@ Todos os quatro PCs terão um IP estático identico
     <tr>
       <td>PC2-GRUPO4-VM03</td>
       <td>192.168.14.51</td>
-      <td>PC1-GRUPO4-VM01</td>
+      <td>PC2-GRUPO4-VM01</td>
       <td>julia-vm03.grupo4-914.ifalara.net</td>
       <td>ratocego1</td>
     </tr>
     <tr>
       <td>PC2-GRUPO4-VM04</td>
       <td>192.168.14.52</td>
-      <td>PC1-GRUPO4-VM02</td>
+      <td>PC2-GRUPO4-VM02</td>
       <td>julia-vm04.grupo4-914.ifalara.net</td>
       <td>ratocego2</td>
     </tr>
     <tr>
       <td>PC3-GRUPO4-VM05</td>
       <td>192.168.14.53</td>
-      <td>PC1-GRUPO4-VM01</td>
+      <td>PC3-GRUPO4-VM01</td>
       <td>emanuel-vm05.grupo4-914.ifalara.net</td>
       <td>farquaad1</td>
     </tr>
     <tr>
       <td>PC3-GRUPO4-VM06</td>
       <td>192.168.14.54</td>
-      <td>PC1-GRUPO4-VM02</td>
+      <td>PC3-GRUPO4-VM02</td>
       <td>emanuel-vm06.grupo4-914.ifalara.net</td>
       <td>farquaad2</td>
     </tr>
     <tr>
       <td>PC4-GRUPO4-VM07</td>
       <td>192.168.14.55</td>
-      <td>PC1-GRUPO4-VM01</td>
+      <td>PC4-GRUPO4-VM01</td>
       <td>micaele-vm07.grupo4-914.ifalara.net</td>
       <td>dorisfeia1</td>
     </tr>
     <tr>
       <td>PC4-GRUPO4-VM08</td>
       <td>192.168.14.56</td>
-      <td>PC1-GRUPO4-VM02</td>
+      <td>PC4-GRUPO4-VM02</td>
       <td>micaele-vm08.grupo4-914.ifalara.net</td>
       <td>dorisfeia2</td>
     </tr>
