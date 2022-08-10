@@ -197,6 +197,7 @@ Todos os quatro PCs terão um IP estático identico
   Essas modificações deverão ser feitas em <b>TODAS</b> as VMs
   >
   
+  Figura 03:
   
  ![NETPLAN-PC3-VM6](https://user-images.githubusercontent.com/84058517/183892138-47cabea4-6ee5-4b67-8cac-61dae850bdf8.png)
 
