@@ -213,4 +213,32 @@ Todos os quatro PCs terão um IP estático identico
 sudo netplan apply
 ```
 
-##
+## Inserindo um nome para a rede ``hostname``
+
+  ```
+  sudo hostnamectl set-hostname nome-do-hostname
+  ```
+  ## Começando a instalar o ``SSH Server``
+  
+   1. Pré-requisitos: <br>
+       1.1. Alterar na configuração da máquina a configuração de rede para ``NAT``. <br>
+       1.2. Comentar as linhas do endereço IP estático.(No arquivo .YAML) <br>
+       1.3. Ativar o DHCP. (No arquivo .YAML) <br>
+
+       ![dhcp-false](https://user-images.githubusercontent.com/84058517/183922957-7aca9c24-ab96-416d-b34b-b518e8df316d.png)
+
+   2. Instalando o SSH Server <br>
+   * ### Certifique-se que a Máquina Virtual está conectada a internet <br>
+       * Para atualizar as definições e versões de pacotes/bibliotecas dos repositórios do Ubuntu <br>
+       ```
+       sudo apt update
+       ```
+       * Para atualizar os pacotes com as novas definições setadas com o update <br>
+       ```
+       sudo apt upgrade -y
+       ```
+   * ### Instalando o SSH <br>
+       * Para instalar: 
+           ```
+           sudo apt-get install openssh-server
+           ```
