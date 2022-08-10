@@ -56,6 +56,125 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   ```
   ~adicionar imagem~
   
+  <h1>Definições</h1>
+  Após ter concluído os passos anteriores, é necessário declarar um IP único na rede para todas as VMs de cada computador.
+  
+  * Para isso, foi feita uma tabela com todos os dados referentes a cada computador:
+  
+ 
+ <h2>Tabela 01</h2>
+ 
+ <table>
+  <tr>
+    <th>Nome dos integrantes</th>
+    <th>Nome dos PCs</th>
+    <th>IP de rede</th>
+    <th>IP de broadcast</th>
+    <th>Intervalo de IPs</th>
+  </tr>
+  <tr>
+    <td>Leonardo Ferreira</td>
+    <td>PC1-GRUPO4</td>
+    <td>192.168.14.48/28</td>
+    <td>192.168.14.63</td>
+    <td>192.168.14.[48-63]/28</td>
+  </tr>
+  <tr>
+    <td>Julia Eloizi</td>
+    <td>PC2-GRUPO4</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Emanuel Vilela</td>
+    <td>PC3-GRUPO4</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Micaele Rayanne</td>
+    <td>PC4-GRUPO4</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+>**_NOTA:_**
+Todos os quatro PCs terão um IP estático identico
+>**_**
+
+ <h2>Tabela 02</h2>
+
+
+  <table>
+    <tr>
+      <th>Nome das VMs</th>
+      <th>IP da VM</th>
+      <th>hostname</th>
+      <th>FQDN da VM</th>
+      <th>Aliase da VM</th>
+    </tr>
+    <tr>
+      <td>PC1-GRUPO4-VM01</td>
+      <td>192.168.14.49</td>
+      <td></td>
+      <td>leonardo-vm01.grupo4-914.ifalara.net</td>
+      <td>burro1</td>
+    </tr>
+    <tr>
+      <td>PC1-GRUPO4-VM02</td>
+      <td>192.168.14.50</td>
+      <td></td>
+      <td>leonardo-vm02.grupo4-914.ifalara.net</td>
+      <td>burro2</td>
+    </tr>
+    <tr>
+      <td>PC2-GRUPO4-VM03</td>
+      <td>192.168.14.51</td>
+      <td></td>
+      <td>julia-vm03.grupo4-914.ifalara.net</td>
+      <td>ratocego1</td>
+    </tr>
+    <tr>
+      <td>PC2-GRUPO4-VM04</td>
+      <td>192.168.14.52</td>
+      <td></td>
+      <td>julia-vm04.grupo4-914.ifalara.net</td>
+      <td>ratocego2</td>
+    </tr>
+    <tr>
+      <td>PC3-GRUPO4-VM05</td>
+      <td>192.168.14.53</td>
+      <td></td>
+      <td>emanuel-vm05.grupo4-914.ifalara.net</td>
+      <td>farquaad1</td>
+    </tr>
+    <tr>
+      <td>PC3-GRUPO4-VM06</td>
+      <td>192.168.14.54</td>
+      <td></td>
+      <td>emanuel-vm06.grupo4-914.ifalara.net</td>
+      <td>farquaad2</td>
+    </tr>
+    <tr>
+      <td>PC4-GRUPO4-VM07</td>
+      <td>192.168.14.55</td>
+      <td></td>
+      <td>micaele-vm07.grupo4-914.ifalara.net</td>
+      <td>dorisfeia1</td>
+    </tr>
+    <tr>
+      <td>PC4-GRUPO4-VM08</td>
+      <td>192.168.14.56</td>
+      <td></td>
+      <td>micaele-vm08.grupo4-914.ifalara.net</td>
+      <td>dorisfeia2</td>
+    </tr>
+  </table>
+  
   <h2>Configuração estática de endereço IP na interface de rede</h2>
   
   * Primeiramente é necessário modificar o arquivo que configura as interfaces de rede
@@ -72,4 +191,11 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   sudo nano /etc/netplan/01-netcfg.yaml 
   ```
   
-  adicione as seguintes linhas...
+  Após ter aberto o arquivo para edição, modifique as configurações antigas para as referente ao <b>PC</b> e a <b>VM</b>. Por exemplo, na figura à seguir, foi utilizado o PC3-VM2
+  
+  ![NETPLAN-PC3-VM2](https://user-images.githubusercontent.com/84058517/183889131-4d78040d-6301-4478-99c5-49135858bdfa.png)
+
+  >**_NOTA:_**
+  enps0s3: # nome da interface que está sendo configurada. Verifique com o comando 'ifconfig -a'
+    
+  >**_**
