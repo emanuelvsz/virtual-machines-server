@@ -11,8 +11,11 @@
 * ### Definindo o host-only
 ![WhatsApp Image 2022-08-10 at 10 59 34](https://user-images.githubusercontent.com/84058517/183979470-5bb51e2d-b634-45b2-8b55-e0deb399bb72.png)
 
-* ### Definindo usuários
+* ### Definindo usuários:
   
- ![WhatsApp Image 2022-08-10 at 10 53 49](https://user-images.githubusercontent.com/84058517/183980882-fec6b547-fb6a-419f-ab3d-980100355032.jpeg)
+![WhatsApp Image 2022-08-10 at 10 53 49](https://user-images.githubusercontent.com/84058517/183980882-fec6b547-fb6a-419f-ab3d-980100355032.jpeg)
   
-* ### Definindo va
+* ### Definindo valores das tabelas: 
+
+![WhatsApp Image 2022-08-10 at 09 49 11 (1)](https://user-images.githubusercontent.com/84058517/183982150-a2f3ad82-cd92-48c6-a8b0-3f9333bce916.jpeg)
+
