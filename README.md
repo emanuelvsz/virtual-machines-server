@@ -269,7 +269,10 @@ sudo netplan apply
        * Coloque a configuração de rede da VM como ``Modo Bridge``
        
        ![pipipopo](https://user-images.githubusercontent.com/84058517/183930270-52ff96ea-7539-4d49-aa3d-fd17cc12e59b.png)
+       * Tire os comentários do arquivo .YAML
        
+       ![semcomentario](https://user-images.githubusercontent.com/84058517/183934739-31b1c0b8-7db6-4078-b6fb-efb875c21964.png)
+
        # Servidor concluído! Ultimos passos: 
        * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
        ```
