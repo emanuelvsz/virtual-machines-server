@@ -199,7 +199,8 @@ Todos os quatro PCs terão um IP estático identico
   
   Figura 03:
   
- ![NETPLAN-PC3-VM6](https://user-images.githubusercontent.com/84058517/183892138-47cabea4-6ee5-4b67-8cac-61dae850bdf8.png)
+ ![NETPLAN-PC3-VM6](https![nome](https://user-images.githubusercontent.com/84058517/183898344-f1469f0b-8649-4569-ac9a-2dd66358a72d.png)
+://user-images.githubusercontent.com/84058517/183892138-47cabea4-6ee5-4b67-8cac-61dae850bdf8.png)
 
   * enps0s3: # nome da interface que está sendo configurada. Verifique com o comando 'ifconfig -a'
   * adresses: # IP e Máscara do Host.
@@ -211,3 +212,5 @@ Todos os quatro PCs terão um IP estático identico
 ```
 sudo netplan apply
 ```
+
+##
