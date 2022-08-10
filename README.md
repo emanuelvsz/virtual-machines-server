@@ -4,7 +4,7 @@ Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre 
 
 >**_NOTA:_**
 Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
->**_**
+>
 
 
 
@@ -104,7 +104,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
 
 >**_NOTA:_**
 Todos os quatro PCs terão um IP estático identico
->**_**
+>
 
  <h2>Tabela 02</h2>
 
@@ -120,56 +120,56 @@ Todos os quatro PCs terão um IP estático identico
     <tr>
       <td>PC1-GRUPO4-VM01</td>
       <td>192.168.14.49</td>
-      <td></td>
+      <td>PC1-GRUPO4-VM01</td>
       <td>leonardo-vm01.grupo4-914.ifalara.net</td>
       <td>burro1</td>
     </tr>
     <tr>
       <td>PC1-GRUPO4-VM02</td>
       <td>192.168.14.50</td>
-      <td></td>
+      <td>PC1-GRUPO4-VM02</td>
       <td>leonardo-vm02.grupo4-914.ifalara.net</td>
       <td>burro2</td>
     </tr>
     <tr>
       <td>PC2-GRUPO4-VM03</td>
       <td>192.168.14.51</td>
-      <td></td>
+      <td>PC1-GRUPO4-VM01</td>
       <td>julia-vm03.grupo4-914.ifalara.net</td>
       <td>ratocego1</td>
     </tr>
     <tr>
       <td>PC2-GRUPO4-VM04</td>
       <td>192.168.14.52</td>
-      <td></td>
+      <td>PC1-GRUPO4-VM02</td>
       <td>julia-vm04.grupo4-914.ifalara.net</td>
       <td>ratocego2</td>
     </tr>
     <tr>
       <td>PC3-GRUPO4-VM05</td>
       <td>192.168.14.53</td>
-      <td></td>
+      <td>PC1-GRUPO4-VM01</td>
       <td>emanuel-vm05.grupo4-914.ifalara.net</td>
       <td>farquaad1</td>
     </tr>
     <tr>
       <td>PC3-GRUPO4-VM06</td>
       <td>192.168.14.54</td>
-      <td></td>
+      <td>PC1-GRUPO4-VM02</td>
       <td>emanuel-vm06.grupo4-914.ifalara.net</td>
       <td>farquaad2</td>
     </tr>
     <tr>
       <td>PC4-GRUPO4-VM07</td>
       <td>192.168.14.55</td>
-      <td></td>
+      <td>PC1-GRUPO4-VM01</td>
       <td>micaele-vm07.grupo4-914.ifalara.net</td>
       <td>dorisfeia1</td>
     </tr>
     <tr>
       <td>PC4-GRUPO4-VM08</td>
       <td>192.168.14.56</td>
-      <td></td>
+      <td>PC1-GRUPO4-VM02</td>
       <td>micaele-vm08.grupo4-914.ifalara.net</td>
       <td>dorisfeia2</td>
     </tr>
@@ -193,9 +193,20 @@ Todos os quatro PCs terão um IP estático identico
   
   Após ter aberto o arquivo para edição, modifique as configurações antigas para as referente ao <b>PC</b> e a <b>VM</b>. Por exemplo, na figura à seguir, foi utilizado o PC3-VM2
   
-  ![NETPLAN-PC3-VM2](https://user-images.githubusercontent.com/84058517/183889131-4d78040d-6301-4478-99c5-49135858bdfa.png)
+  >**_OBS:_**
+  Essas modificações deverão ser feitas em <b>TODAS</b> as VMs
+  >
+  
+  
+ ![NETPLAN-PC3-VM6](https://user-images.githubusercontent.com/84058517/183892138-47cabea4-6ee5-4b67-8cac-61dae850bdf8.png)
 
-  >**_NOTA:_**
-  enps0s3: # nome da interface que está sendo configurada. Verifique com o comando 'ifconfig -a'
-    
-  >**_**
+  * enps0s3: # nome da interface que está sendo configurada. Verifique com o comando 'ifconfig -a'
+  * adresses: # IP e Máscara do Host.
+  * gateaway: # IP do Gateway
+  * dhcp4: false # dhcp4 false -> cliente DHCP está desabilitado, logo o utilizará o IP do campo 'addresses'    
+
+## Após ter modificado o arquivo .YAML, as modificações terão que ser salvas com o seguinte comando: 
+
+```
+sudo netplan apply
+```
