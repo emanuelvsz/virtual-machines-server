@@ -282,3 +282,5 @@ sudo netplan apply
        ```
        ssh administrador@192.168.14.53
        ```
+       
+       Após isso, está pronto o funcionamento do servidor
