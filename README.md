@@ -6,12 +6,18 @@ Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre 
 Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
 >
 
+# Sumário 
+
+ * <a href="#vm-creating">Criando máquina virtual</a>
+ * <a href="#vm-definitions">Definições</a>
+ * <a href="#vm-installingssh">Instalando o SSH</a>
+ * <a href="#vm-finalpasses">Passos finais</a>
 
 
 
 <h2> Criando uma Máquina Virtual </h2>
 
-  1. Criando uma VM utilizando um arquivo .OVA 
+  1. <section id="vm-creating"> criando uma VM utilizando um arquivo .OVA </section>
 
   Figura 01: Importando o arquivo .OVA
   
@@ -54,17 +60,13 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
    ubunto login: administrador
    senha: adminifal
    ```
-   
-   Figura 03:
-   
    ![login](https://user-images.githubusercontent.com/84058517/183930844-c1398edd-1382-4534-8c84-9edab5cd98be.png)
   
-  <h1>Definições</h1>
+  <section id="vm-definitions"><h1>Definições</h1></section>
   Após ter concluído os passos anteriores, é necessário declarar um IP único na rede para todas as VMs de cada computador.
   
   * Para isso, foi feita uma tabela com todos os dados referentes a cada computador:
   
- 
  <h2>Tabela 01</h2>
  
  <table>
@@ -178,19 +180,6 @@ Todos os quatro PCs terão um IP estático identico
     </tr>
   </table>
   
-  ## Criando um novo usuário na Máquina Virtual
-  
-  Figura 04:
-  
-  ![usuario](https://user-images.githubusercontent.com/84058517/184362240-3bc827bc-b279-4cbd-a923-239118072548.jpeg)
-
-  ## Adicionando os valores das tabelas na VM
-  
-  Figura 05:
-  
-  ![usuarios](https://user-images.githubusercontent.com/84058517/184362313-7122aa4e-d1be-4340-ac0d-85a4500836a7.jpeg)
-
-  
   ## Inserindo um nome para a rede ``hostname``
 
   ```
@@ -219,7 +208,7 @@ Todos os quatro PCs terão um IP estático identico
   Essas modificações deverão ser feitas em <b>TODAS</b> as VMs
   >
   
-  Figura 06:
+  Figura 03:
   
  ![nome](https://user-images.githubusercontent.com/84058517/183898632-661ef4a0-f276-4fc2-926d-793237830fec.png)
 
@@ -235,15 +224,13 @@ Todos os quatro PCs terão um IP estático identico
 sudo netplan apply
 ```
 
-  ## Começando a instalar o ``SSH Server``
+  ## <section id="vm-installingssh">Começando a instalar o ``SSH Server``</section>
   
    1. Pré-requisitos: <br>
        1.1. Alterar na configuração da máquina a configuração de rede para ``NAT``. <br>
        1.2. Comentar as linhas do endereço IP estático.(No arquivo .YAML) <br>
        1.3. Ativar o DHCP. (No arquivo .YAML) <br>
 
-       Figura 07:
-       
        ![dhcp-false](https://user-images.githubusercontent.com/84058517/183922957-7aca9c24-ab96-416d-b34b-b518e8df316d.png)
 
    2. Instalando o SSH Server <br>
@@ -274,10 +261,6 @@ sudo netplan apply
          ```
          netstat -an | grep LISTEN. # verifique se a porta 22 está LISTENING
          ```
-         Figura 08:
-         
-         ![porta22](https://user-images.githubusercontent.com/84058517/184363119-54e310b7-e3f2-477b-a8a0-1ae94f45d369.png)
-
          
        * Para garantir o funcionamento do SSH Server, é necessário habilita-lo no firewall. Faça-o: 
          ```
@@ -290,12 +273,8 @@ sudo netplan apply
        #### Após ter concluído o processo, volte para as configurações anteriores:
        * Coloque a configuração de rede da VM como ``Modo Bridge``
        
-       Figura 09:
-       
        ![pipipopo](https://user-images.githubusercontent.com/84058517/183930270-52ff96ea-7539-4d49-aa3d-fd17cc12e59b.png)
        * Tire os comentários do arquivo .YAML
-       
-       Figura 10:
        
        ![semcomentario](https://user-images.githubusercontent.com/84058517/183934739-31b1c0b8-7db6-4078-b6fb-efb875c21964.png)
 
@@ -304,7 +283,7 @@ sudo netplan apply
        Lembre-se de dar o comando ``sudo netplan apply`` para salvar as alterações feitas
       >
 
-       # Ultimos passos: 
+       # <section id="vm-definitions">Ultimos passos: </section>
        * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
        
        Exemplo: 
@@ -322,14 +301,10 @@ sudo netplan apply
        
      ### Ssh não instalado: 
        
-     Figura 11:
-     
      ![1](https://user-images.githubusercontent.com/84058517/184357430-b4468e68-8d24-4995-b09e-41e636f7cc1a.png)
 
      ### Firewall não está ativo:
-     
-     Figura 12:
-     
+       
      ![2](https://user-images.githubusercontent.com/84058517/184357715-b93370b6-297e-4c7f-8d73-4b66cdf3a22b.png)
        
      * Para ativa-lo, basta dar o comando ``sudo ufw enable``
