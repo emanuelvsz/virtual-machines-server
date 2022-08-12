@@ -12,6 +12,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
  * <a href="#vm-definitions">Definições</a>
  * <a href="#vm-installingssh">Instalando o SSH</a>
  * <a href="#vm-finalpasses">Passos finais</a>
+ * <a href="#vm-errors">Erros</a>
 
 
 
@@ -283,7 +284,7 @@ sudo netplan apply
        Lembre-se de dar o comando ``sudo netplan apply`` para salvar as alterações feitas
       >
 
-       # <section id="vm-definitions">Ultimos passos: </section>
+       # <section id="vm-finalpasses">Ultimos passos: </section>
        * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
        
        Exemplo: 
@@ -297,7 +298,7 @@ sudo netplan apply
        
        Após isso, está pronto o funcionamento do servidor. 
        
-     ## Prováveis erros
+     ### <section id="vm-errors"><h1>Prováveis erros</h1></section>
        
      ### Ssh não instalado: 
        
