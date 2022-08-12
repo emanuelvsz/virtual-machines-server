@@ -213,7 +213,7 @@ Todos os quatro PCs terão um IP estático identico
   * gateaway: # IP do Gateway
   * dhcp4: false # dhcp4 false -> cliente DHCP está desabilitado, logo o utilizará o IP do campo 'addresses'    
 
-## Após ter modificado o arquivo .YAML, as modificações terão que ser salvas com o seguinte comando: 
+#### Após ter modificado o arquivo .YAML, as modificações terão que ser salvas com o seguinte comando: 
 
 ```
 sudo netplan apply
@@ -273,8 +273,15 @@ sudo netplan apply
        
        ![semcomentario](https://user-images.githubusercontent.com/84058517/183934739-31b1c0b8-7db6-4078-b6fb-efb875c21964.png)
 
-       # Servidor concluído! Ultimos passos: 
+
+      >**_OBS:_**
+       Lembre-se de dar o comando ``sudo netplan apply`` para salvar as alterações feitas
+      >
+
+       # Ultimos passos: 
        * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
+       
+       Exemplo: 
        ```
        ssh usuario@ipderedeunico
        ```
@@ -283,4 +290,19 @@ sudo netplan apply
        ssh administrador@192.168.14.53
        ```
        
-       Após isso, está pronto o funcionamento do servidor
+       Após isso, está pronto o funcionamento do servidor. 
+       
+     ## Prováveis erros
+       
+     ### Ssh não instalado: 
+       
+     ![1](https://user-images.githubusercontent.com/84058517/184357430-b4468e68-8d24-4995-b09e-41e636f7cc1a.png)
+
+     ### Firewall não está ativo:
+       
+     ![2](https://user-images.githubusercontent.com/84058517/184357715-b93370b6-297e-4c7f-8d73-4b66cdf3a22b.png)
+       
+     * Para ativa-lo, basta dar o comando ``sudo ufw enable``
+       
+     ### Firewall não está permitindo o ``ssh``(verificar a porta 22)
+
