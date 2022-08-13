@@ -22,14 +22,14 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
 
   Figura 01: Importando o arquivo .OVA
   
-  <img width="482" alt="import-ova1" src="https://user-images.githubusercontent.com/84058517/183082785-16a33090-0acb-49f7-966b-da90f937ab38.png">
+  <img width="482" alt="import-ova1" src="./img/figure-01.png">
   
   <br>
   
   Figura 02: Especificações da Maquina Virtual .OVA
 
   
-  ![criandoVM2](https://user-images.githubusercontent.com/84058517/183087854-27897109-880d-49dd-a3de-c2efda3be598.png)
+  <img width="482" alt="import-ova1" src="./img/figure-02.png">
 
 
   Após a criação das duas VMs, é obrigatório os seguintes passos em <b>CADA</b> Máquina Virtual
@@ -64,7 +64,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
    
    Figura 03: 
    
-   ![login](https://user-images.githubusercontent.com/84058517/183930844-c1398edd-1382-4534-8c84-9edab5cd98be.png)
+  <img width="482" alt="import-ova1" src="./img/figure-03.png">
   
   <section id="vm-definitions"><h1>Definições</h1></section>
   Após ter concluído os passos anteriores, é necessário declarar um IP único na rede para todas as VMs de cada computador.
@@ -214,7 +214,7 @@ Todos os quatro PCs terão um IP estático identico
   
   Figura 04:
   
- ![nome](https://user-images.githubusercontent.com/84058517/183898632-661ef4a0-f276-4fc2-926d-793237830fec.png)
+  <img width="482" alt="import-ova1" src="./img/figure-04.png">
 
 
   * enps0s3: # nome da interface que está sendo configurada. Verifique com o comando 'ifconfig -a'
@@ -237,7 +237,7 @@ sudo netplan apply
 
         Figura 05: 
         
-       ![dhcp-false](https://user-images.githubusercontent.com/84058517/183922957-7aca9c24-ab96-416d-b34b-b518e8df316d.png)
+        <img width="482" alt="import-ova1" src="./img/figure-05.png">
 
    2. Instalando o SSH Server <br>
    * ### Certifique-se que a Máquina Virtual está conectada a internet <br>
@@ -268,6 +268,8 @@ sudo netplan apply
          netstat -an | grep LISTEN. # verifique se a porta 22 está LISTENING
          ```
          
+         
+         
        * Para garantir o funcionamento do SSH Server, é necessário habilita-lo no firewall. Faça-o: 
          ```
          sudo ufw allow ssh
@@ -281,17 +283,28 @@ sudo netplan apply
        
        Figura 06: 
        
-       ![pipipopo](https://user-images.githubusercontent.com/84058517/183930270-52ff96ea-7539-4d49-aa3d-fd17cc12e59b.png)
+       <img width="482" alt="import-ova1" src="./img/figure-06.png">
+       
        * Tire os comentários do arquivo .YAML
        
        Figura 07:
        
-       ![semcomentario](https://user-images.githubusercontent.com/84058517/183934739-31b1c0b8-7db6-4078-b6fb-efb875c21964.png)
+       <img width="482" alt="import-ova1" src="./img/figure-07.png">
 
 
       >**_OBS:_**
        Lembre-se de dar o comando ``sudo netplan apply`` para salvar as alterações feitas
       >
+
+       ## Agora a parte física:
+      
+       * Conecte todos os computadores utilizando ``cabos de rede`` e um ``switch``
+       <br>
+
+      Figura 08             |  Figura 09
+      :-------------------------:|:-------------------------:
+      <img width="300" alt="import-ova1" src="./img/figure-08.jpeg"> |  <img width="300" alt="import-ova1" src="./img/figure-09.jpeg">
+      Conectando o  ``cabo de rede`` à entrada da <br> ``placa de rede`` do computador | Conectando a outra ponta do cabo de rede ao ``switch``
 
        # <section id="vm-finalpasses">Ultimos passos: </section>
        * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
@@ -309,13 +322,13 @@ sudo netplan apply
        
      ### Ssh não instalado: 
      
-     Figura 08: 
+     Figura 10: 
        
      ![1](https://user-images.githubusercontent.com/84058517/184357430-b4468e68-8d24-4995-b09e-41e636f7cc1a.png)
 
      ### Firewall não está ativo:
        
-     Figura 09: 
+     Figura 11: 
      
      ![2](https://user-images.githubusercontent.com/84058517/184357715-b93370b6-297e-4c7f-8d73-4b66cdf3a22b.png)
        
