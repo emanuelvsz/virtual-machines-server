@@ -61,6 +61,9 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
    ubunto login: administrador
    senha: adminifal
    ```
+   
+   Figura 03: 
+   
    ![login](https://user-images.githubusercontent.com/84058517/183930844-c1398edd-1382-4534-8c84-9edab5cd98be.png)
   
   <section id="vm-definitions"><h1>Definições</h1></section>
@@ -209,7 +212,7 @@ Todos os quatro PCs terão um IP estático identico
   Essas modificações deverão ser feitas em <b>TODAS</b> as VMs
   >
   
-  Figura 03:
+  Figura 04:
   
  ![nome](https://user-images.githubusercontent.com/84058517/183898632-661ef4a0-f276-4fc2-926d-793237830fec.png)
 
@@ -232,6 +235,8 @@ sudo netplan apply
        1.2. Comentar as linhas do endereço IP estático.(No arquivo .YAML) <br>
        1.3. Ativar o DHCP. (No arquivo .YAML) <br>
 
+        Figura 05: 
+        
        ![dhcp-false](https://user-images.githubusercontent.com/84058517/183922957-7aca9c24-ab96-416d-b34b-b518e8df316d.png)
 
    2. Instalando o SSH Server <br>
@@ -274,8 +279,12 @@ sudo netplan apply
        #### Após ter concluído o processo, volte para as configurações anteriores:
        * Coloque a configuração de rede da VM como ``Modo Bridge``
        
+       Figura 06: 
+       
        ![pipipopo](https://user-images.githubusercontent.com/84058517/183930270-52ff96ea-7539-4d49-aa3d-fd17cc12e59b.png)
        * Tire os comentários do arquivo .YAML
+       
+       Figura 07:
        
        ![semcomentario](https://user-images.githubusercontent.com/84058517/183934739-31b1c0b8-7db6-4078-b6fb-efb875c21964.png)
 
@@ -287,10 +296,8 @@ sudo netplan apply
        # <section id="vm-finalpasses">Ultimos passos: </section>
        * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
        
-       Exemplo: 
-       ```
-       ssh usuario@ipderedeunico
-       ```
+       Exemplo: ``ssh usuario@ipderedeunico``
+       
        Exemplo: 
        ```
        ssh administrador@192.168.14.53
@@ -301,11 +308,15 @@ sudo netplan apply
      ### <section id="vm-errors"><h1>Prováveis erros</h1></section>
        
      ### Ssh não instalado: 
+     
+     Figura 08: 
        
      ![1](https://user-images.githubusercontent.com/84058517/184357430-b4468e68-8d24-4995-b09e-41e636f7cc1a.png)
 
      ### Firewall não está ativo:
        
+     Figura 09: 
+     
      ![2](https://user-images.githubusercontent.com/84058517/184357715-b93370b6-297e-4c7f-8d73-4b66cdf3a22b.png)
        
      * Para ativa-lo, basta dar o comando ``sudo ufw enable``
