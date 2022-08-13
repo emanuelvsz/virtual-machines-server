@@ -268,7 +268,10 @@ sudo netplan apply
          netstat -an | grep LISTEN. # verifique se a porta 22 está LISTENING
          ```
          
+         Figura 06:
          
+         <img width="482" alt="import-ova1" src="./img/figure-06.png">
+
          
        * Para garantir o funcionamento do SSH Server, é necessário habilita-lo no firewall. Faça-o: 
          ```
@@ -283,13 +286,13 @@ sudo netplan apply
        
        Figura 07: 
        
-       <img width="482" alt="import-ova1" src="./img/figure-06.png">
+       <img width="482" alt="import-ova1" src="./img/figure-07.png">
        
        * Tire os comentários do arquivo .YAML
        
        Figura 08:
-       
-       <img width="482" alt="import-ova1" src="./img/figure-07.png">
+       [
+       <img width="482" alt="import-ova1" src="./img/figure-08.png">
 
 
       >**_OBS:_**
@@ -303,7 +306,7 @@ sudo netplan apply
 
       Figura 09            |  Figura 10
       :-------------------------:|:-------------------------:
-      <img width="300" alt="import-ova1" src="./img/figure-08.jpeg"> |  <img width="300" alt="import-ova1" src="./img/figure-09.jpeg">
+      <img width="300" alt="import-ova1" src="./img/figure-09.jpeg"> |  <img width="300" alt="import-ova1" src="./img/figure-10.jpeg">
       Conectando o  ``cabo de rede`` à entrada da <br> ``placa de rede`` do computador | Conectando a outra ponta do cabo de rede ao ``switch``
 
        # <section id="vm-finalpasses">Ultimos passos: </section>
@@ -324,14 +327,14 @@ sudo netplan apply
      
      Figura 11: 
        
-     ![1](https://user-images.githubusercontent.com/84058517/184357430-b4468e68-8d24-4995-b09e-41e636f7cc1a.png)
+     <img width="300" alt="import-ova1" src="./img/figure-11.png">
 
      ### Firewall não está ativo:
        
      Figura 12: 
      
-     ![2](https://user-images.githubusercontent.com/84058517/184357715-b93370b6-297e-4c7f-8d73-4b66cdf3a22b.png)
-       
+     <img width="300" alt="import-ova1" src="./img/figure-12.png">
+     
      * Para ativa-lo, basta dar o comando ``sudo ufw enable``
        
      ### Firewall não está permitindo o ``ssh``(verificar a porta 22)
