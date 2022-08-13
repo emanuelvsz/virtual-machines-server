@@ -281,13 +281,13 @@ sudo netplan apply
        #### Após ter concluído o processo, volte para as configurações anteriores:
        * Coloque a configuração de rede da VM como ``Modo Bridge``
        
-       Figura 06: 
+       Figura 07: 
        
        <img width="482" alt="import-ova1" src="./img/figure-06.png">
        
        * Tire os comentários do arquivo .YAML
        
-       Figura 07:
+       Figura 08:
        
        <img width="482" alt="import-ova1" src="./img/figure-07.png">
 
@@ -301,7 +301,7 @@ sudo netplan apply
        * Conecte todos os computadores utilizando ``cabos de rede`` e um ``switch``
        <br>
 
-      Figura 08             |  Figura 09
+      Figura 09            |  Figura 10
       :-------------------------:|:-------------------------:
       <img width="300" alt="import-ova1" src="./img/figure-08.jpeg"> |  <img width="300" alt="import-ova1" src="./img/figure-09.jpeg">
       Conectando o  ``cabo de rede`` à entrada da <br> ``placa de rede`` do computador | Conectando a outra ponta do cabo de rede ao ``switch``
@@ -322,13 +322,13 @@ sudo netplan apply
        
      ### Ssh não instalado: 
      
-     Figura 10: 
+     Figura 11: 
        
      ![1](https://user-images.githubusercontent.com/84058517/184357430-b4468e68-8d24-4995-b09e-41e636f7cc1a.png)
 
      ### Firewall não está ativo:
        
-     Figura 11: 
+     Figura 12: 
      
      ![2](https://user-images.githubusercontent.com/84058517/184357715-b93370b6-297e-4c7f-8d73-4b66cdf3a22b.png)
        
