@@ -281,61 +281,61 @@ sudo netplan apply
          ```
          sudo ufw enable
          ```
-       #### Após ter concluído o processo, volte para as configurações anteriores:
-       * Coloque a configuração de rede da VM como ``Modo Bridge``
+   #### Após ter concluído o processo, volte para as configurações anteriores:
+   * Coloque a configuração de rede da VM como ``Modo Bridge``
        
-       Figura 07: 
+   Figura 07: 
        
-       <img width="482" alt="import-ova1" src="./img/figure-07.png">
+   <img width="482" alt="import-ova1" src="./img/figure-07.png">
        
-       * Tire os comentários do arquivo .YAML
+   * Tire os comentários do arquivo .YAML
        
-       Figura 08:
-       [
-       <img width="482" alt="import-ova1" src="./img/figure-08.png">
+   Figura 08:
+       
+   <img width="482" alt="import-ova1" src="./img/figure-08.png">
 
 
-      >**_OBS:_**
-       Lembre-se de dar o comando ``sudo netplan apply`` para salvar as alterações feitas
-      >
+   >**_OBS:_**
+   Lembre-se de dar o comando ``sudo netplan apply`` para salvar as alterações feitas
+   >
 
-       ## Agora a parte física:
+   ## Agora a parte física:
       
-       * Conecte todos os computadores utilizando ``cabos de rede`` e um ``switch``
-       <br>
+   * Conecte todos os computadores utilizando ``cabos de rede`` e um ``switch``
+   <br>
 
-      Figura 09            |  Figura 10
-      :-------------------------:|:-------------------------:
-      <img width="300" alt="import-ova1" src="./img/figure-09.jpeg"> |  <img width="300" alt="import-ova1" src="./img/figure-10.jpeg">
-      Conectando o  ``cabo de rede`` à entrada da <br> ``placa de rede`` do computador | Conectando a outra ponta do cabo de rede ao ``switch``
+   Figura 09            |  Figura 10
+   :-------------------------:|:-------------------------:
+   <img width="300" alt="import-ova1" src="./img/figure-09.jpeg"> |  <img width="300" alt="import-ova1" src="./img/figure-10.jpeg">
+   Conectando o  ``cabo de rede`` à entrada da <br> ``placa de rede`` do computador | Conectando a outra ponta do cabo de rede ao ``switch``
 
-       # <section id="vm-finalpasses">Ultimos passos: </section>
-       * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
+   # <section id="vm-finalpasses">Ultimos passos: </section>
+   * Logar em outra máquina virtual(pode ser até em outro PC caso os dois ou mais estejam conectados via cabeamento):
        
-       Exemplo: ``ssh usuario@ipderedeunico``
+   Exemplo: ``ssh usuario@ipderedeunico``
        
-       Exemplo: 
-       ```
-       ssh administrador@192.168.14.53
-       ```
+   Exemplo: 
+   ```
+   ssh administrador@192.168.14.53
+   ```
        
-       Após isso, está pronto o funcionamento do servidor. 
+   Após isso, está pronto o funcionamento do servidor. 
        
-     ### <section id="vm-errors"><h1>Prováveis erros</h1></section>
+   ### <section id="vm-errors"><h1>Prováveis erros</h1></section>
        
-     ### Ssh não instalado: 
+   ### Ssh não instalado: 
      
-     Figura 11: 
+   Figura 11: 
        
-     <img width="300" alt="import-ova1" src="./img/figure-11.png">
+   <img width="300" alt="import-ova1" src="./img/figure-11.png">
 
-     ### Firewall não está ativo:
+   ### Firewall não está ativo:
        
-     Figura 12: 
+   Figura 12: 
      
-     <img width="300" alt="import-ova1" src="./img/figure-12.png">
+   <img width="300" alt="import-ova1" src="./img/figure-12.png">
      
-     * Para ativa-lo, basta dar o comando ``sudo ufw enable``
+   * Para ativa-lo, basta dar o comando ``sudo ufw enable``
        
      ### Firewall não está permitindo o ``ssh``(verificar a porta 22)
 
