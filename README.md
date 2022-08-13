@@ -1,4 +1,4 @@
-# Roteiro para realização do projeto do 2º bimestre das disciplinas de Infraestrutura e Serviços de Redes e Projetos de Redes
+# Roteiro para realização do projeto do 2º bimestre das disciplinas de ``Projeto e Infraestrutura de Redes`` e ``Serviços de Redes``
 
 Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre quatro computadores com duas VMs cada.
 
