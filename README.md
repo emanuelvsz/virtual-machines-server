@@ -15,7 +15,16 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
  * <a href="#vm-errors">Erros</a>
 
 
-
+    
+## Diagrama de ordem do projeto
+   ```mermaid
+     graph LR;
+         A(Criar duas máquinas virtuais em <br> cada um dos quatro computadores)-->B;
+         B(Instalar o pacote SSH Server)-->C;
+         C(Definir configurações desejadas)-->D;
+         D(Conectar via cabo de rede computadores);
+   ```
+    
 <h2> Criando uma Máquina Virtual </h2>
 
   1. <section id="vm-creating"> criando uma VM utilizando um arquivo .OVA </section>
