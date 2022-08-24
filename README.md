@@ -59,7 +59,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   
   Figura 03:
   
-  <img width="430" alt="import-ova1" src="./img/figure-15.png">
+  <img width="500" alt="import-ova1" src="./img/figure-16.png">
 
   
   2.3 Definindo tipo de rede(no Virtual Box)
@@ -216,6 +216,8 @@ Todos os quatro PCs terão um IP estático identico
   * Esse arquivo é do tipo .YAML e fica no diretório ``/etc/netplan``
   * Inicialmente, verifique o nome do arquivo em seu computador da seguinte forma:
   
+  Figura 06:
+  
   <img width="482" alt="import-ova1" src="./img/figure-15.png">
 
   ```
@@ -234,7 +236,7 @@ Todos os quatro PCs terão um IP estático identico
   Essas modificações deverão ser feitas em <b>TODAS</b> as VMs
   >
   
-  Figura 06:
+  Figura 07:
   
   <img width="482" alt="import-ova1" src="./img/figure-04.png">
 
@@ -257,7 +259,7 @@ sudo netplan apply
        1.2. Comentar as linhas do endereço IP estático.(No arquivo .YAML) <br>
        1.3. Ativar o DHCP. (No arquivo .YAML) <br>
 
-        Figura 07: 
+        Figura 08: 
         
         <img width="482" alt="import-ova1" src="./img/figure-05.png">
 
@@ -276,7 +278,7 @@ sudo netplan apply
       sudo apt-get install openssh-server
       ```
       
-      Figura 08: 
+      Figura 09: 
       
        <img width="482" alt="import-ova1" src="./img/figure-13.png">
        
@@ -297,7 +299,7 @@ sudo netplan apply
          netstat -an | grep LISTEN. # verifique se a porta 22 está LISTENING
          ```
          
-         Figura 09:
+         Figura 10:
          
          <img width="482" alt="import-ova1" src="./img/figure-06.png">
 
@@ -313,13 +315,13 @@ sudo netplan apply
    #### Após ter concluído o processo, volte para as configurações anteriores:
    * Coloque a configuração de rede da VM como ``Modo Bridge``
        
-   Figura 10: 
+   Figura 11: 
        
    <img width="482" alt="import-ova1" src="./img/figure-07.png">
        
    * Tire os comentários do arquivo .YAML
        
-   Figura 11:
+   Figura 12:
        
    <img width="482" alt="import-ova1" src="./img/figure-08.png">
 
@@ -333,7 +335,7 @@ sudo netplan apply
    * Conecte todos os computadores utilizando ``cabos de rede`` e um ``switch``
    <br>
 
-   Figura 12            |  Figura 13
+   Figura 13            |  Figura 14
    :-------------------------:|:-------------------------:
    <img width="300" alt="import-ova1" src="./img/figure-09.jpeg"> |  <img width="300" alt="import-ova1" src="./img/figure-10.jpeg">
    Conectando o  ``cabo de rede`` à entrada da <br> ``placa de rede`` do computador | Conectando a outra ponta do cabo de rede ao ``switch``
@@ -354,13 +356,13 @@ sudo netplan apply
        
    ### Ssh não instalado: 
      
-   Figura 14: 
+   Figura 15: 
        
    <img width="300" alt="import-ova1" src="./img/figure-11.png">
 
    ### Firewall não está ativo:
        
-   Figura 15: 
+   Figura 16: 
      
    <img width="300" alt="import-ova1" src="./img/figure-12.png">
      
