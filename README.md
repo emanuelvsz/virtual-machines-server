@@ -17,6 +17,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
 
     
 ## Diagrama de ordem do projeto
+
    ```mermaid
      graph LR;
          A(Criar duas máquinas virtuais em <br> cada um dos quatro computadores)-->B;
