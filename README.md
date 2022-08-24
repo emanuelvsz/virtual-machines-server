@@ -15,8 +15,6 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
  * <a href="#vm-errors">Erros</a>
  * <a href="#vm-conclusion">Considerações finais e resultados</a>
 
-
-
     
 ## Diagrama de ordem do projeto
 
