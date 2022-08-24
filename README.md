@@ -263,6 +263,13 @@ sudo netplan apply
       ```
       sudo apt-get install openssh-server
       ```
+      
+      Figura 06: 
+      
+       <img width="482" alt="import-ova1" src="./img/figure-13.png">
+       
+       * Digite ``y`` para prosseguir a instalação
+
     
        #### Após ter feito o processo inteiro, sem nenhum empecilho, prossiga:
        
@@ -278,7 +285,7 @@ sudo netplan apply
          netstat -an | grep LISTEN. # verifique se a porta 22 está LISTENING
          ```
          
-         Figura 06:
+         Figura 07:
          
          <img width="482" alt="import-ova1" src="./img/figure-06.png">
 
@@ -294,13 +301,13 @@ sudo netplan apply
    #### Após ter concluído o processo, volte para as configurações anteriores:
    * Coloque a configuração de rede da VM como ``Modo Bridge``
        
-   Figura 07: 
+   Figura 08: 
        
    <img width="482" alt="import-ova1" src="./img/figure-07.png">
        
    * Tire os comentários do arquivo .YAML
        
-   Figura 08:
+   Figura 09:
        
    <img width="482" alt="import-ova1" src="./img/figure-08.png">
 
@@ -314,7 +321,7 @@ sudo netplan apply
    * Conecte todos os computadores utilizando ``cabos de rede`` e um ``switch``
    <br>
 
-   Figura 09            |  Figura 10
+   Figura 10            |  Figura 11
    :-------------------------:|:-------------------------:
    <img width="300" alt="import-ova1" src="./img/figure-09.jpeg"> |  <img width="300" alt="import-ova1" src="./img/figure-10.jpeg">
    Conectando o  ``cabo de rede`` à entrada da <br> ``placa de rede`` do computador | Conectando a outra ponta do cabo de rede ao ``switch``
@@ -335,13 +342,13 @@ sudo netplan apply
        
    ### Ssh não instalado: 
      
-   Figura 11: 
+   Figura 12: 
        
    <img width="300" alt="import-ova1" src="./img/figure-11.png">
 
    ### Firewall não está ativo:
        
-   Figura 12: 
+   Figura 13: 
      
    <img width="300" alt="import-ova1" src="./img/figure-12.png">
      
