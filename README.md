@@ -13,6 +13,8 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
  * <a href="#vm-installingssh">Instalando o SSH</a>
  * <a href="#vm-finalpasses">Passos finais</a>
  * <a href="#vm-errors">Erros</a>
+ * <a href="#vm-errors">Considerações finais e resultados</a>
+
 
 
     
