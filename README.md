@@ -13,7 +13,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
  * <a href="#vm-installingssh">Instalando o SSH</a>
  * <a href="#vm-finalpasses">Passos finais</a>
  * <a href="#vm-errors">Erros</a>
- * <a href="#vm-errors">Considerações finais e resultados</a>
+ * <a href="#vm-conclusion">Considerações finais e resultados</a>
 
 
 
@@ -358,8 +358,10 @@ sudo netplan apply
    * Para ativa-lo, basta dar o comando ``sudo ufw enable``
        
      ### Firewall não está permitindo o ``ssh``(verificar a porta 22)
+     
+  <section id="vm-conclusion"><h1>Considerações finais e resultados</h1></section>
 
-   # Considerações finais e resultados
+   
    
    ```mermaid
     pie
