@@ -87,6 +87,13 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   <img width="482" alt="import-ova1" src="./img/figure-03.png">
   
   <section id="vm-definitions"><h1>Definições</h1></section>
+  
+  ### Definindo o host-only
+  
+  
+  
+  
+  
   Após ter concluído os passos anteriores, é necessário declarar um IP único na rede para todas as VMs de cada computador.
   
   * Para isso, foi feita uma tabela com todos os dados referentes a cada computador:
