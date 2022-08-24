@@ -88,6 +88,12 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   
   ### Definindo o host-only
   
+  <img width="482" alt="import-ova1" src="./img/figure-03.png">
+  
+  
+  
+  
+  
   
   
   
