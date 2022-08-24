@@ -384,7 +384,6 @@ sudo netplan apply
   <section id="vm-conclusion"><h1>Considerações finais e resultados</h1></section>
 
    
-   
    ```mermaid
     pie
         title Desempenho de cada PC
