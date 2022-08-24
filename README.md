@@ -25,7 +25,16 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
          C(Definir configurações desejadas)-->D;
          D(Conectar via cabo de rede computadores);
    ```
-    
+   
+   ```mermaid
+    pie
+        title Desempenho de cada VM
+        "VM01" : 386
+        "VM02" : 85
+        "VM03" : 150 
+
+   ```  
+        
 <h2> Criando uma Máquina Virtual </h2>
 
   1. <section id="vm-creating"> criando uma VM utilizando um arquivo .OVA </section>
