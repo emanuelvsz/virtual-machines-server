@@ -40,10 +40,8 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   <br>
   
   Figura 02: Especificações da Maquina Virtual .OVA
-
   
   <img width="482" alt="import-ova1" src="./img/figure-02.png">
-
 
   Após a criação das duas VMs, é obrigatório os seguintes passos em <b>CADA</b> Máquina Virtual
   
@@ -59,11 +57,16 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   ifconfig -a
   ```
   
+  Figura 03:
+  
+  <img width="430" alt="import-ova1" src="./img/figure-15.png">
+
+  
   2.3 Definindo tipo de rede(no Virtual Box)
   
   * Para fazer com que as maquinas virtuais do PC se comuniquem entre sí, é necessário coloca-las no modo de <b>Rede Interna</b>
   
-     Figura 03: 
+     Figura 04: 
   
     <img width="400" alt="import-ova1" src="./img/figure-14.png">
 
@@ -79,7 +82,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
    senha: adminifal
    ```
    
-   Figura 04: 
+   Figura 05: 
    
   <img width="482" alt="import-ova1" src="./img/figure-03.png">
   
