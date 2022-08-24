@@ -27,15 +27,7 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
          C(Definir configurações desejadas)-->D;
          D(Conectar via cabo de rede computadores);
    ```
-   
-   ```mermaid
-    pie
-        title Desempenho de cada VM
-        "VM01" : 386
-        "VM02" : 85
-        "VM03" : 150 
-
-   ```  
+    
         
 <h2> Criando uma Máquina Virtual </h2>
 
@@ -367,3 +359,13 @@ sudo netplan apply
        
      ### Firewall não está permitindo o ``ssh``(verificar a porta 22)
 
+   # Considerações finais e resultados
+   
+   ```mermaid
+    pie
+        title Desempenho de cada PC
+        "PC01" : 386
+        "PC02" : 85
+        "PC03" : 150
+        "PC04" : 50
+   ``` 
