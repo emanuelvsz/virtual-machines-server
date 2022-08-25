@@ -2,15 +2,19 @@
 
 Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre quatro computadores com duas VMs cada.
 
->**_NOTA:_**
+>**_NOTA-01:_**
 Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
+>
+
+>**_NOTA-02:_**
+Todo esse processo deve ser feito em ``TODA`` máquina virtual, porém, algumas coisas serão feitas apenas em ``UMA`` máquina, então fique atento às observações
 >
 
 # Sumário 
 
+ * <a href="#vm-installing">Instalando pré-requisitos</a>
  * <a href="#vm-creating">Criando máquina virtual</a>
  * <a href="#vm-definitions">Definições</a>
- * <a href="#vm-installingssh">Instalando o SSH</a>
  * <a href="#vm-finalpasses">Passos finais</a>
  * <a href="#vm-errors">Erros</a>
  * <a href="#vm-conclusion">Considerações finais e resultados</a>
@@ -20,16 +24,42 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
 
    ```mermaid
      graph LR;
-         A(Criar duas máquinas virtuais em <br> cada um dos quatro computadores)-->B;
-         B(Instalar o pacote SSH Server)-->C;
+         A(Instalar pacotes)-->B;
+         B(Criar duas máquinas virtuais em <br> cada um dos quatro computadores)-->C;
          C(Definir configurações desejadas)-->D;
          D(Conectar via cabo de rede computadores);
    ```
     
         
+## Instalando pré requisitos
+<section id="vm-installing"></section>
+
+* Para isso, verifique se a configuração da rede da máquina está em modo ``NAT``, para utilizarmos o pacote de internet no computador.
+* Após tudo isso, prossiga a instalação dos pacotes: 
+
+  1.1. Instalar o pacote de rede(``para conseguir utilizar os comandos necessários``)
+  
+  
+  ```
+  sudo apt install net-tools -y
+  ```
+  
+  1.2 Visualizando as interfaces de rede
+  ```
+  ifconfig -a
+  ```
+  
+  Figura 03: Mostrando as configurações de rede
+  
+  <img width="500" alt="import-ova1" src="./img/figure-16.png">
+        
 <h2> Criando uma Máquina Virtual </h2>
 
   1. <section id="vm-creating"> criando uma VM utilizando um arquivo .OVA </section>
+  
+  >**_NOTA-03:_**
+  O arquivo .OVA é utilizado para criar uma máquina virtual já pronta. Nesse caso ele foi disponibilizado pelo professor da disciplina. 
+  >
 
   Figura 01: Importando o arquivo .OVA
   
@@ -44,21 +74,6 @@ Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
   Após a criação das duas VMs, é obrigatório os seguintes passos em <b>CADA</b> Máquina Virtual
   
   2. Configurando VM
-  
-  2.1. Para instalar o pacote de rede
-  ```
-  sudo apt install net-tools -y
-  ```
-  
-  2.2 Para visualizar as interfaces de rede
-  ```
-  ifconfig -a
-  ```
-  
-  Figura 03: Mostrando as configurações de rede
-  
-  <img width="500" alt="import-ova1" src="./img/figure-16.png">
-
   
   2.3 Definindo tipo de rede(no Virtual Box)
   
