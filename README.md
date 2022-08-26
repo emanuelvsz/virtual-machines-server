@@ -2,18 +2,10 @@
 
 Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre quatro computadores com duas VMs cada.
 
->**_NOTA-01:_**
-Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo
->
-
->**_NOTA-02:_**
-Todo esse processo deve ser feito em ``TODA`` máquina virtual, porém, algumas coisas serão feitas apenas em ``UMA`` máquina, então fique atento às observações
->
-
 # Sumário 
 
- * <a href="#vm-installing">Instalando pré-requisitos</a>
  * <a href="#vm-creating">Criando máquina virtual</a>
+ * <a href="#vm-installing">Instalando pré-requisitos</a>
  * <a href="#vm-definitions">Definições</a>
  * <a href="#vm-finalpasses">Passos finais</a>
  * <a href="#vm-errors">Erros</a>
@@ -31,31 +23,18 @@ Todo esse processo deve ser feito em ``TODA`` máquina virtual, porém, algumas 
    ```
     
         
-## Instalando pré requisitos
-<section id="vm-installing"></section>
-
-* Para isso, verifique se a configuração da rede da máquina está em modo ``NAT``, para utilizarmos o pacote de internet no computador.
-* Após tudo isso, prossiga a instalação dos pacotes: 
-
-  1.1. Instalar o pacote de rede(``para conseguir utilizar os comandos necessários``)
-  
-  
-  ```
-  sudo apt install net-tools -y
-  ```
-  
-  1.2 Visualizando as interfaces de rede
-  ```
-  ifconfig -a
-  ```
-  
-  Figura 03: Mostrando as configurações de rede
-  
-  <img width="500" alt="import-ova1" src="./img/figure-16.png">
-        
 <h2> Criando uma Máquina Virtual </h2>
 
+
   1. <section id="vm-creating"> criando uma VM utilizando um arquivo .OVA </section>
+  
+  >**_NOTA-01:_**
+  Inicialmente, serão criadas duas máquinas virtuais em cada PC do grupo.
+  >
+  
+  >**_NOTA-02:_**
+   Todo esse processo deve ser feito em ``TODO`` computador, onde serão criadas duas máquinas virtuais em ``CADA`` um deles.
+   >
   
   >**_NOTA-03:_**
   O arquivo .OVA é utilizado para criar uma máquina virtual já pronta. Nesse caso ele foi disponibilizado pelo professor da disciplina. 
@@ -70,21 +49,8 @@ Todo esse processo deve ser feito em ``TODA`` máquina virtual, porém, algumas 
   Figura 02: Especificações da Maquina Virtual .OVA
   
   <img width="482" alt="import-ova1" src="./img/figure-02.png">
-
-  Após a criação das duas VMs, é obrigatório os seguintes passos em <b>CADA</b> Máquina Virtual
   
-  2. Configurando VM
-  
-  2.3 Definindo tipo de rede(no Virtual Box)
-  
-  * Para fazer com que as maquinas virtuais do PC se comuniquem entre sí, é necessário coloca-las no modo de <b>Rede Interna</b>
-  
-     Figura 04: Colocando no modo ``Rede Interna`` nas configurações da VM
-  
-    <img width="400" alt="import-ova1" src="./img/figure-14.png">
-
-
- 3. Logando nas VMs
+  2. Logando nas VMs
 
   Após tudo ter sido realizado, é necessário logar como administrador para prosseguir
   
@@ -98,6 +64,129 @@ Todo esse processo deve ser feito em ``TODA`` máquina virtual, porém, algumas 
    Figura 05: Demonstração do resultado do comando
    
   <img width="482" alt="import-ova1" src="./img/figure-03.png">
+    
+## Instalando pré requisitos
+<section id="vm-installing"></section>
+
+#### Certifique-se que a Máquina Virtual está conectada a internet <br>
+
+ * Verifique se as configurações de rede de ``CADA`` VM está definida como ``NAT``
+ * Modifique o arquivo .YAML e comente as linhas de IP estático(``adresses`` e ``gateway``)
+
+ ## Editando o .YAML
+  
+  ```
+  sudo nano /etc/netplan/01-netcfg.yaml 
+  ```
+  
+  >**_OBS:_**
+  “YAML Ain’t Markup Language” é um formato de serialização de dados legível por humanos, sendo bastante utilizado para arquivos de configuração, assim     como o JSON e o XML.  
+  >
+  
+  Após ter aberto o arquivo para edição, modifique as configurações antigas para as referente ao <b>PC</b> e a <b>VM</b>. Por exemplo, na figura à    seguir, foi utilizado o PC3-VM2
+  
+  >**_OBS:_**
+  Essas modificações deverão ser feitas em <b>TODAS</b> as VMs
+  >
+  
+  Figura 09: Exemplo do arquivo .YAML
+  
+  <img width="482" alt="import-ova1" src="./img/figure-04.png">
+
+
+  * enps0s3: # nome da interface que está sendo configurada. Verifique com o comando 'ifconfig -a'
+  * adresses: # IP e Máscara do Host.
+  * gateaway: # IP do Gateway
+  * dhcp4: false # dhcp4 false -> cliente DHCP está desabilitado, logo o utilizará o IP do campo 'addresses'    
+
+    #### Após ter modificado o arquivo .YAML, as modificações terão que ser salvas com o seguinte comando: 
+
+    ```
+    sudo netplan apply
+    ```        
+
+ * O comando ``sudo apt update`` atualiza a lista de pacotes e programas que podem ser instalados na máquina.<br>
+ ```
+ sudo apt update
+ ```
+       
+ * O comando ``sudo apt upgrade`` atualiza o sistema e baixa e instala atualizações de pacotes e dos programas da máquina.<br>
+       
+ ```
+ sudo apt upgrade -y
+ ```
+
+ * Após tudo isso, prossiga a instalação dos pacotes: 
+
+  #### Instalar o pacote de rede(para conseguir utilizar os comandos necessários, por exemplo, o ``ifconfig``)
+  
+  ```
+  sudo apt install net-tools -y
+  ```
+  
+  #### Visualizando as interfaces de rede
+  ```
+  ifconfig -a
+  ```
+  
+  Figura 03: Mostrando as configurações de rede
+  
+  <img width="500" alt="import-ova1" src="./img/figure-16.png">
+  
+  2. Instalando o SSH Server <br>
+  
+  >**_NOTA-01:_**
+  SSH é a sigla para Secure Socket Shell, sendo um dos protocolos específicos de segurança de troca de arquivos entre cliente e servidor de internet,       usando criptografia. 
+  >
+       
+   * ### Instalando o SSH <br>
+   ```
+   sudo apt-get install openssh-server
+   ```
+      
+   Figura 11: Instalando o SSH Server
+      
+   <img width="482" alt="import-ova1" src="./img/figure-13.png">
+       
+   * Digite ``y`` para prosseguir a instalação
+   #### Após ter feito o processo inteiro, sem nenhum empecilho, prossiga:
+       
+   * Verifique se o ssh foi instalado corretamente: 
+
+   ```
+   systemctl status ssh
+   ```
+
+   * Verifique o status das portas do sistema:
+
+   ```
+   netstat -an | grep LISTEN. # verifique se a porta 22 está LISTENING
+   ```
+         
+   Figura 12: Verificando se a porta 22 está sendo ouvida
+         
+   <img width="482" alt="import-ova1" src="./img/figure-06.png">
+
+         
+   * Para garantir o funcionamento do SSH Server, é necessário habilita-lo no firewall. Faça-o: 
+   ```
+   sudo ufw allow ssh
+   ```
+   * Ative o firewall: 
+   ```
+   sudo ufw enable
+   ```
+   
+   <h2>Configuração estática de endereço IP na interface de rede</h2>
+  
+  
+  Figura 08: Exemplo do nome do arquivo na máquina utilizada para exemplo
+  
+  <img width="482" alt="import-ova1" src="./img/figure-15.png">
+
+  ```
+  ls -la /etc/netplan
+  ```
   
   <section id="vm-definitions"><h1>Definições</h1></section>
   
@@ -235,110 +324,8 @@ Todos os quatro PCs terão um IP estático identico
   ```
   sudo hostnamectl set-hostname nome-do-hostname
   ```
-  
-  <h2>Configuração estática de endereço IP na interface de rede</h2>
-  
-  * Primeiramente é necessário modificar o arquivo que configura as interfaces de rede
-  * Esse arquivo é do tipo .YAML e fica no diretório ``/etc/netplan``
-  * Inicialmente, verifique o nome do arquivo em seu computador da seguinte forma:
-  
-  Figura 08: Exemplo do nome do arquivo na máquina utilizada para exemplo
-  
-  <img width="482" alt="import-ova1" src="./img/figure-15.png">
-
-  ```
-  ls -la /etc/netplan
-  ```
-  
-  ## Editando o .YAML
-  
-  ```
-  sudo nano /etc/netplan/01-netcfg.yaml 
-  ```
-  
-  Após ter aberto o arquivo para edição, modifique as configurações antigas para as referente ao <b>PC</b> e a <b>VM</b>. Por exemplo, na figura à seguir, foi utilizado o PC3-VM2
-  
-  >**_OBS:_**
-  Essas modificações deverão ser feitas em <b>TODAS</b> as VMs
-  >
-  
-  Figura 09: Exemplo do arquivo .YAML
-  
-  <img width="482" alt="import-ova1" src="./img/figure-04.png">
-
-
-  * enps0s3: # nome da interface que está sendo configurada. Verifique com o comando 'ifconfig -a'
-  * adresses: # IP e Máscara do Host.
-  * gateaway: # IP do Gateway
-  * dhcp4: false # dhcp4 false -> cliente DHCP está desabilitado, logo o utilizará o IP do campo 'addresses'    
-
-#### Após ter modificado o arquivo .YAML, as modificações terão que ser salvas com o seguinte comando: 
-
-```
-sudo netplan apply
-```
-
-  ## <section id="vm-installingssh">Começando a instalar o ``SSH Server``</section>
-  
-   1. Pré-requisitos: <br>
-       1.1. Alterar na configuração da máquina a configuração de rede para ``NAT``. <br>
-       1.2. Comentar as linhas do endereço IP estático.(No arquivo .YAML) <br>
-       1.3. Ativar o DHCP. (No arquivo .YAML) <br>
-
-        Figura 10: Modificando o .YAML
-        
-        <img width="482" alt="import-ova1" src="./img/figure-05.png">
-
-   2. Instalando o SSH Server <br>
-   * ### Certifique-se que a Máquina Virtual está conectada a internet <br>
-       * Para atualizar as definições e versões de pacotes/bibliotecas dos repositórios do Ubuntu <br>
-       ```
-       sudo apt update
-       ```
-       * Para atualizar os pacotes com as novas definições setadas com o update <br>
-       ```
-       sudo apt upgrade -y
-       ```
-   * ### Instalando o SSH <br>
-      ```
-      sudo apt-get install openssh-server
-      ```
-      
-      Figura 11: Instalando o SSH Server
-      
-       <img width="482" alt="import-ova1" src="./img/figure-13.png">
-       
-       * Digite ``y`` para prosseguir a instalação
-
-    
-       #### Após ter feito o processo inteiro, sem nenhum empecilho, prossiga:
-       
-       * Verifique se o ssh foi instalado corretamente: 
-
-         ```
-         systemctl status ssh
-         ```
-
-       * Verifique o status das portas do sistema:
-
-         ```
-         netstat -an | grep LISTEN. # verifique se a porta 22 está LISTENING
-         ```
-         
-         Figura 12: Verificando se a porta 22 está sendo ouvida
-         
-         <img width="482" alt="import-ova1" src="./img/figure-06.png">
-
-         
-       * Para garantir o funcionamento do SSH Server, é necessário habilita-lo no firewall. Faça-o: 
-         ```
-         sudo ufw allow ssh
-         ```
-       * Ative o firewall: 
-         ```
-         sudo ufw enable
-         ```
-   #### Após ter concluído o processo, volte para as configurações anteriores:
+   
+   ## Após ter concluído o processo, volte para as configurações anteriores:
    * Coloque a configuração de rede da VM como ``Modo Bridge``
        
    Figura 13: Colocando a rede em ``Modo Bridge``
