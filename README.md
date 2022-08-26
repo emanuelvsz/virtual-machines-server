@@ -73,10 +73,14 @@ Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre 
  * Verifique se as configurações de rede de ``CADA`` VM está definida como ``NAT``
  * Modifique o arquivo .YAML e comente as linhas de IP estático(``adresses`` e ``gateway``)  
  * Verifique o nome do arquivo .YAML em sua VM
-  
+   
   Figura 08: Exemplo do nome do arquivo na máquina utilizada para exemplo
   
   <img width="482" alt="import-ova1" src="./img/figure-15.png">
+  
+  Exemplo de como o arquivo deve ser modificado: 
+  
+  <img width="482" alt="import-ova1" src="./img/figure-05.png">
   
   ## Editando o .YAML
   
@@ -97,7 +101,6 @@ Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre 
   Figura 09: Exemplo do arquivo .YAML
   
   <img width="482" alt="import-ova1" src="./img/figure-04.png">
-
 
   * enps0s3: # nome da interface que está sendo configurada. Verifique com o comando 'ifconfig -a'
   * adresses: # IP e Máscara do Host.
@@ -177,14 +180,11 @@ Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre 
    ```
    sudo ufw allow ssh
    ```
+   
    * Ative o firewall: 
    ```
    sudo ufw enable
    ```
-
-  ```
-  ls -la /etc/netplan
-  ```
   
   <section id="vm-definitions"><h1>Definições</h1></section>
   
@@ -382,7 +382,6 @@ Todos os quatro PCs terão um IP estático identico
      ### Firewall não está permitindo o ``ssh``(verificar a porta 22)
      
   <section id="vm-conclusion"><h1>Considerações finais e resultados</h1></section>
-
    
    ```mermaid
     pie
@@ -392,3 +391,7 @@ Todos os quatro PCs terão um IP estático identico
         "PC03" : 120
         "PC04" : 105
    ``` 
+   
+   # Ping do PC4-VM01
+   
+   para os outros
