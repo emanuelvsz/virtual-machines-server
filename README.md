@@ -71,9 +71,14 @@ Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre 
 #### Certifique-se que a Máquina Virtual está conectada a internet <br>
 
  * Verifique se as configurações de rede de ``CADA`` VM está definida como ``NAT``
- * Modifique o arquivo .YAML e comente as linhas de IP estático(``adresses`` e ``gateway``)
-
- ## Editando o .YAML
+ * Modifique o arquivo .YAML e comente as linhas de IP estático(``adresses`` e ``gateway``)  
+ * Verifique o nome do arquivo .YAML em sua VM
+  
+  Figura 08: Exemplo do nome do arquivo na máquina utilizada para exemplo
+  
+  <img width="482" alt="import-ova1" src="./img/figure-15.png">
+  
+  ## Editando o .YAML
   
   ```
   sudo nano /etc/netplan/01-netcfg.yaml 
@@ -176,13 +181,6 @@ Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre 
    ```
    sudo ufw enable
    ```
-   
-   <h2>Configuração estática de endereço IP na interface de rede</h2>
-  
-  
-  Figura 08: Exemplo do nome do arquivo na máquina utilizada para exemplo
-  
-  <img width="482" alt="import-ova1" src="./img/figure-15.png">
 
   ```
   ls -la /etc/netplan
