@@ -392,6 +392,4 @@ Todos os quatro PCs terão um IP estático identico
         "PC04" : 105
    ``` 
    
-   # Ping do PC4-VM01
-   
-   para os outros
+   # Ping do PC4-VM01 para os outros
