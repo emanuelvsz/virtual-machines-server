@@ -414,5 +414,17 @@ Todos os quatro PCs terão um IP estático identico
    <img width="400" alt="import-ova1" src="./img/pings/farquaad1.png">
    <img width="400" alt="import-ova1" src="./img/pings/farquaad2.png">
    
+   # SSH de todos os usuários 
    
+   ### O seguinte processo foi feito em todas as máquinas virtuais, em um usuário de cada
+   
+   <img width="400" alt="import-ova1" src="./img/sshs/emanuel-dorisfeia.png">
+   
+   ### Resultado
+
+   <img width="400" alt="import-ova1" src="./img/sshs/sshs.png">
+   
+
+
+
    
