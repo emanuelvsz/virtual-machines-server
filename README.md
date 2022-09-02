@@ -394,4 +394,25 @@ Todos os quatro PCs terão um IP estático identico
    
    # Ping do PC4-VM01 para os outros
    
-   <img width="300" alt="import-ova1" src="./img/figure-12.png">
+   ### PC01
+   
+   <img width="400" alt="import-ova1" src="./img/pings/burro1.png">
+   <img width="400" alt="import-ova1" src="./img/pings/burro2.png">
+   
+   ### PC02
+   
+   <img width="400" alt="import-ova1" src="./img/pings/ratocego1.png">
+   <img width="400" alt="import-ova1" src="./img/pings/ratocego2.png">
+   
+   ### PC03
+   
+   <img width="400" alt="import-ova1" src="./img/pings/dorisfeia1.png">
+   <img width="400" alt="import-ova1" src="./img/pings/dorisfeia2.png">
+   
+   ### PC04
+   
+   <img width="400" alt="import-ova1" src="./img/pings/farquaad1.png">
+   <img width="400" alt="import-ova1" src="./img/pings/farquaad2.png">
+   
+   
+   
