@@ -2,6 +2,8 @@
 
 Objetivo: criação de *8* máquinas virtuais e criação de uma conexão entre quatro computadores com duas VMs cada.
 
+Integrantes: Micaele Rayanne, Julia Eloizi, Emanuel Vilela e Leonardo Ferreira
+
 # Sumário 
 
  * <a href="#vm-creating">Criando máquina virtual</a>
